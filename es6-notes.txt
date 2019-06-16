@@ -1,0 +1,8 @@
+Var: 
+    - variables are inferior because they are function scoped.
+    - var let you reuse variable names
+
+Let:
+    - variables are block scoped. 
+    - let does not let you reuse variable names
+    
