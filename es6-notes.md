@@ -90,3 +90,13 @@ Const:
     bill.birth('jess');
     console.log(bill.children);
     ```
+
+
+## Spread Operator:
+    ```
+    const names = ["Jon", "Bill", "Santa"];
+    const moreNames = ["William", "Paul", "Mike"];
+    console.log(...names);
+    console.log(...names, 'Gio', ...moreNames);
+    ```
+    The crappy way would be to use .concat
