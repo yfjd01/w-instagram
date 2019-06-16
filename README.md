@@ -1,4 +1,4 @@
-#Implementation of Instagram#
+# Implementation of Instagram
 
 Fun fact: w-instagram stands for win-instagram
 

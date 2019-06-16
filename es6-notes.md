@@ -1,4 +1,4 @@
-##Noteable ES6 changes.##
+# Noteable ES6 changes.
 
 Var: 
     - variables are inferior because they are function scoped.
