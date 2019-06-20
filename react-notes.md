@@ -24,3 +24,8 @@ Webpack
 create-react-app does all this for you, it uses webpack and all other configurations for us
 * npm install -g create-react-app
 * we install it globally as we want to use it in our terminal everywhere
+
+
+React makes use of elements to describe React user interface, how do we create elements?
+
+What renders wepage is dom, the process of decribing what we want to render and actually rendering element is decoupled. 
