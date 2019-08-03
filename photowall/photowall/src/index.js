@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom'
 
 const tasks = ['Take out the trash', 'Shovel the drive way', 'Walk the dog'];
 
-//reacts make use of elements to describe ui, elements are objects duh
-//1st argument is tag, 2nd is props, 3rd is content
-const element = React.createElement('ol', null, //ol stands for ordered list tag
-    tasks.map((task, index) => React.createElement('li', {key: index}, task))
-);
+//Since we use create-react-app, we are actually using something to 
+//compile our jsx to be javascript
+const element = 
+<div> 
+    <h1> Nice </h1>
+    <ol> 
+        { tasks.map((task, index) => <li key = {index}> {task} </li> )} 
+    </ol>
+</div> //we need a div tag as jsx elements require only one element 
 
-//nesting elements can be pretty tedious, the solution is JSX
-
+//element is basically createElement atm
 ReactDOM.render(element, document.getElementById('root')); //actually rendering the element onto webpage
-//root element of the document is discributed in public/index.html 
