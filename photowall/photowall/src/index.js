@@ -6,31 +6,40 @@ import ReactDOM from 'react-dom'
 
 const tasks = ['Take out the trash', 'Shovel the drive way', 'Walk the dog'];
 
-class List  extends Component { //This is a component class that we extended
-    //render returns elements taht describe what we see on the screen
+class List  extends Component {
+    //How to use the probs we pass down below
+    //this is really important, this points to the component instance that is being rendered
     render() {
-        return(<ol> 
-                    { tasks.map((task, index) => <li key = {index}> {task} </li> )} 
-                </ol>)
+        return(
+            <ol> 
+                { this.props.tasks.map((task, index) => <li key = {index}> {task} </li> )} 
+            </ol>
+        )
     }    
 }
 
 class Title extends Component {
     render () {
-        return <h1> Nice </h1>
+        return <h1> { this.props.title } </h1>
     }
 }
 
 class Main extends Component {
+    //Examples of using Props
     render () {
         return <div> 
-            <Title/>
-            <List/>
-            <List/>
+            <Title title = {'todos'}/>
+            <List tasks = {['Mow the lawn', 'Walk the dog']} />
+            <List tasks = {['hose the driveway', 'finish the laundry']}/>
         </div>
     }
 }
 
+
+
 //This is the compositional model, we combine subcomponents to make a main component
 //This is exactly what we had before but we are rendering components this time
 ReactDOM.render(<Main/>, document.getElementById('root')); //actually rendering the element onto webpage
+
+
+//This commit will be for Props for components
