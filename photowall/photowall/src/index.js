@@ -1,17 +1,36 @@
-import React from 'react' //how to import react library, give access to libraries methods
+import React, {Component} from 'react' 
+//how to import react library, give access to libraries methods
+//we can make component by importing Complent class from react
+
 import ReactDOM from 'react-dom'
 
 const tasks = ['Take out the trash', 'Shovel the drive way', 'Walk the dog'];
 
-//Since we use create-react-app, we are actually using something to 
-//compile our jsx to be javascript
-const element = 
-<div> 
-    <h1> Nice </h1>
-    <ol> 
-        { tasks.map((task, index) => <li key = {index}> {task} </li> )} 
-    </ol>
-</div> //we need a div tag as jsx elements require only one element 
+class List  extends Component { //This is a component class that we extended
+    //render returns elements taht describe what we see on the screen
+    render() {
+        return(<ol> 
+                    { tasks.map((task, index) => <li key = {index}> {task} </li> )} 
+                </ol>)
+    }    
+}
 
-//element is basically createElement atm
-ReactDOM.render(element, document.getElementById('root')); //actually rendering the element onto webpage
+class Title extends Component {
+    render () {
+        return <h1> Nice </h1>
+    }
+}
+
+class Main extends Component {
+    render () {
+        return <div> 
+            <Title/>
+            <List/>
+            <List/>
+        </div>
+    }
+}
+
+//This is the compositional model, we combine subcomponents to make a main component
+//This is exactly what we had before but we are rendering components this time
+ReactDOM.render(<Main/>, document.getElementById('root')); //actually rendering the element onto webpage
