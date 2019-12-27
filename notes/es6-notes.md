@@ -2,7 +2,7 @@
 
 The purpose of this is to review basic ES6 syntax.
 
-##Types:
+## Types:
 
 Var: 
     - variables are inferior because they are function scoped.
@@ -13,11 +13,11 @@ Let:
     - let does not let you reuse variable names
 
 Const: 
-    - Obiouvsly a const, cant update, cannot resign
+    - Obviously a const, cant update, cannot resign
     - Const does still have block scoped.
     - Const objects are not resign, however the objects properties are reasignable
 
-##Arrow Functions:
+## Arrow Functions:
 
     common es6 functions include: .map, .filter
 
@@ -35,13 +35,13 @@ Const:
     If one argument you can do 
     const updatedIntegers = integers.map(number => number + 1);
 
-##Template Strings:
+## Template Strings:
     Using `
     let name = "Bill";
     let age = "20";
     const sentence = `My name is ${name} and I am ${age*2} years old`;
 
-##Prototype Methods:
+## Prototype Methods:
     Object: collection of properties associated with a variable
 
     Constructor:
@@ -65,7 +65,7 @@ Const:
     bill.speak();
     ```
 
-##Classes:
+## Classes:
     Creating an object with es6 constructor
     ```
     class Person {
@@ -100,3 +100,7 @@ Const:
     console.log(...names, 'Gio', ...moreNames);
     ```
     The crappy way would be to use .concat
+
+## React description syntax 
+
+{} this stands for javascript operation that is defined within html
